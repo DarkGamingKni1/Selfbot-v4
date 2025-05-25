@@ -1,0 +1,10 @@
+aiohttp
+art
+colorama
+discord.py-self
+dhooks
+psutil
+pytz
+qrcode
+requests
+wavelink
