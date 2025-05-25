@@ -70,60 +70,8 @@ vc = {}
 channel_id = None  
 voice_file_path = "voice.json"
 shadow_color = 0xbc00ff
-n2cx = "cluster0.1k9dowr"
-
-sex_shadow = f"mongodb+srv://{p2sx}:{psx}@{n2cx}.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
-nom_ke = "licenseBot"
-ACTIVATION_COLLECTION_NAME = "activation"
-LICENSES_COLLECTION_NAME = "licenses"
-client = MongoClient(sex_shadow)
-db = client[nom_ke]
-activation_collection = db[ACTIVATION_COLLECTION_NAME]
-licenses_collection = db[LICENSES_COLLECTION_NAME]
-
-def vlk(license_key):
-    license_doc = licenses_collection.find_one({"license_key": license_key})
-    if license_doc:
-        return True
-    else:
-        print("Error: Invalid license key.")
-        sys.exit(1)
-
-async def meowxx(user_id):
-    try:
-        user_doc = activation_collection.find_one({"_id": "bot_activation"})
-        
-        if not user_doc:
-            print("Bot not activated yet. Activating now...")
-            await activate_shadow(user_id)
-            return False
-
-        if 'user_id' not in user_doc or str(user_doc['user_id']).strip() != str(user_id).strip():
-            print(f"Error: Invalid or missing user ID. Expected {user_doc.get('user_id')}, found {user_id}")
-            await bot.close()
-            return False
-        return True
-
-    except Exception as e:
-        print(f"Error checking bot activation: {e}")
-        return False
-
-async def activate_shadow(user_id):
-    activation_collection.replace_one(
-        {"_id": "bot_activation"},
-        {"user_id": user_id},
-        upsert=True)
-    print("Restarting bot...")
-    if os.name == 'nt': 
-        os.execv(sys.executable, ['python'] + sys.argv)
-    else:
-        os.execv(sys.executable, ['python3'] + sys.argv)
 
 bot = commands.Bot(command_prefix='>', self_bot=True, help_command=None)
-
-if not vlk(license_key):
-    print("Invalid license key. Please put a valid license key in config.json.")
-    sys.exit(1)
 
 ####################################
 
@@ -145,21 +93,9 @@ def banner():
     """
     print(b)
 
-@tasks.loop(seconds=150)
-async def dcl():
-    user_id = bot.user.id
-    is_activated = await meowxx(user_id)
-    if not is_activated:
-        await bot.close()
-        return
 
 @bot.event
-async def on_ready():
-    user_id = bot.user.id
-    is_activated = await meowxx(user_id)
-    if not is_activated:
-        return
-    dcl.start()
+async def on_ready
     await bot.load_extension("cogs.auto_responder")
     await bot.load_extension("cogs.auto_sender")
     await bot.load_extension("cogs.afk")
