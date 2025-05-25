@@ -94,7 +94,7 @@ def banner():
 
 
 @bot.event
-async def on_ready();
+async def on_ready():
     await bot.load_extension("cogs.auto_responder")
     await bot.load_extension("cogs.auto_sender")
     await bot.load_extension("cogs.afk")
