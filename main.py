@@ -9,7 +9,6 @@ import inspect
 colorama.init()
 import dateutil.parser as parser 
 from datetime import datetime, timezone
-from pymongo import MongoClient
 
 def load_config(config_file_path):
     with open(config_file_path, 'r') as config_file:
@@ -95,7 +94,7 @@ def banner():
 
 
 @bot.event
-async def on_ready
+async def on_ready();
     await bot.load_extension("cogs.auto_responder")
     await bot.load_extension("cogs.auto_sender")
     await bot.load_extension("cogs.afk")
