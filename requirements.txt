@@ -8,3 +8,4 @@ pytz
 qrcode
 requests
 wavelink
+python-dateutil
