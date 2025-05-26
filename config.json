@@ -1,16 +1,16 @@
 {
     "license_key": "",
     "token": "",
-    "prefix": "",
-    "bot_name": "",
-    "User_Id": "",
-    "SERVER_Link": "",
+    "prefix": ",",
+    "bot_name": "KaluCord",
+    "User_Id": "1073899929736593448",
+    "SERVER_Link": "https://discord.gg/7zXPrzZnz9",
     "tatum_api_key": "",
-    "LTC_ADDRESS": "",
+    "LTC_ADDRESS": "ltc1q8jrdcp8n42tl34gjjupczczuq4gn5f27gxex7c",
     "LTC_PRIVATE_KEY": "",
     "UPI_ID": "",
     "non_nito_alt": "",
     "webhook": "",
-    "guild": 1370706388707446835,
-    "channel_id": 1370706724939501598 
+    "guild": 1242159378703056967,
+    "channel_id": 1242466662599360573 
 }
