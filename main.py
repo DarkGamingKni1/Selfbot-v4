@@ -77,11 +77,18 @@ bot = commands.Bot(command_prefix='>', self_bot=True, help_command=None)
 headers = {"Content-Type": "application/json"}
 
 def banner():
-    print("\033[94m" + " █▀▀▀█  █  █  █▀▀█  █▀▀▄  █▀▀█  █   █    ▀▀█▀▀  █▀▀█  █▀▀█  █    █▀▀▀█ " + "\033[0m")
-    print("\033[94m" + " ▀▀▀▄▄  █▀▀█  █▄▄█  █  █  █  █  █▄█▄█      █    █  █  █  █  █    ▀▀▀▄▄  " + "\033[0m")
-    print("\033[94m" + " █▄▄▄█  ▀  ▀  ▀  ▀  ▀▀▀   ▀▀▀▀   ▀ ▀       █    ▀▀▀▀  ▀▀▀▀  ▀▀▀  █▄▄▄█ " + "\033[0m")
-    print("\033[95m" + "                    Made by shadow.site                        " + "\033[0m")
-    print("\033[95m" + "                    Shadow Selfbot v4                          " + "\033[0m")
+    print("\033[94m" + """ 
+
+██╗  ██╗ █████╗ ██╗     ██╗   ██╗ ██████╗ ██████╗ ██████╗ ██████╗ 
+██║ ██╔╝██╔══██╗██║     ██║   ██║██╔════╝██╔═══██╗██╔══██╗██╔══██╗
+█████╔╝ ███████║██║     ██║   ██║██║     ██║   ██║██████╔╝██║  ██║
+██╔═██╗ ██╔══██║██║     ██║   ██║██║     ██║   ██║██╔══██╗██║  ██║
+██║  ██╗██║  ██║███████╗╚██████╔╝╚██████╗╚██████╔╝██║  ██║██████╔╝
+╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝ ╚═════╝  ╚═════╝ ╚═════╝ ╚═╝  ╚═╝╚═════╝ 
+                                                                  
+ """ + "\033[0m")
+    print("\033[95m" + "                    Made by kalukaliya6969                       " + "\033[0m")
+    print("\033[95m" + "                    KaluCord v2.0                         " + "\033[0m")
     b = f"""
     --------------------------------------------
     \033[94m[\033[92m-\033[94m] » Logged in as {bot.user.name}\033[0m
@@ -241,7 +248,7 @@ async def help(ctx, helpcategory="none"):
             f"`{bot.command_prefix}screenshot` - Takes a screenshot\n"
             f"`{bot.command_prefix}getpic` - Retrieves a picture\n"
         )
-        embed.set_footer(text=f"Made by 75hq • Today at {now}", icon_url=ctx.author.avatar.url if ctx.author.avatar else None)
+        embed.set_footer(text=f"Made by KaluBhoi • Today at {now}", icon_url=ctx.author.avatar.url if ctx.author.avatar else None)
 
     elif "emoji" in helpcategory:
         embed.title = f"<:stolen_emoji_blaze:1306312036845883394> Emoji Commands"
@@ -251,7 +258,7 @@ async def help(ctx, helpcategory="none"):
             f"`{bot.command_prefix}downloadguildemojis [guild-id]` - Downloads emojis from a guild\n"
             f"`{bot.command_prefix}stealguildemoji [guild-id]` - Steals emojis from a guild\n"
         )
-        embed.set_footer(text=f"Made by 75hq • Today at {now}", icon_url=ctx.author.avatar.url if ctx.author.avatar else None)
+        embed.set_footer(text=f"Made by KaluBhoi • Today at {now}", icon_url=ctx.author.avatar.url if ctx.author.avatar else None)
 
     elif "moderation" in helpcategory or "mod" in helpcategory:
         embed.title = f"<:HeadMod:1306221130654154796> Moderation Commands"
@@ -264,7 +271,7 @@ async def help(ctx, helpcategory="none"):
             f"`{bot.command_prefix}clearcontent [amount,content]` - Clears specific content\n"
             f"`{bot.command_prefix}nuke` - Nukes a channel\n"
         )
-        embed.set_footer(text=f"Made by 75hq • Today at {now}", icon_url=ctx.author.avatar.url if ctx.author.avatar else None)
+        embed.set_footer(text=f"Made by KaluBhoi • Today at {now}", icon_url=ctx.author.avatar.url if ctx.author.avatar else None)
 
     elif "snipe" in helpcategory:
         embed.title = f"<:msg:1306221132327948358> Snipe Commands"
@@ -273,7 +280,7 @@ async def help(ctx, helpcategory="none"):
             f"`{bot.command_prefix}nitrosnipe [on/off]` - Toggles Nitro snipe\n"
             f"`{bot.command_prefix}giveawaysnipe [on/off]` - Toggles Giveaway snipe\n"
         )
-        embed.set_footer(text=f"Made by 75hq • Today at {now}", icon_url=ctx.author.avatar.url if ctx.author.avatar else None)
+        embed.set_footer(text=f"Made by KaluBhoi • Today at {now}", icon_url=ctx.author.avatar.url if ctx.author.avatar else None)
 
     elif "nuke" in helpcategory:
         embed.title = f"<:thunder2:1305942208632983573> Nuke Commands"
@@ -291,7 +298,7 @@ async def help(ctx, helpcategory="none"):
             f"`{bot.command_prefix}tokendisable [token]` - Disables a token\n"
             f"`{bot.command_prefix}fucktoken [token]` - Destroys a token\n"
         )
-        embed.set_footer(text=f"Made by 75hq • Today at {now}", icon_url=ctx.author.avatar.url if ctx.author.avatar else None)
+        embed.set_footer(text=f"Made by KaluBhoi • Today at {now}", icon_url=ctx.author.avatar.url if ctx.author.avatar else None)
 
     elif "fun" in helpcategory:
         embed.title = f"<:fun:1306312785243930655> Fun Commands"
@@ -321,14 +328,14 @@ async def help(ctx, helpcategory="none"):
             f"`{bot.command_prefix}spam [amount] [message]` - Spams a message\n"
             f"`{bot.command_prefix}qr [message]` - Generates a QR code\n"
         )
-        embed.set_footer(text=f"Made by 75hq • Today at {now}", icon_url=ctx.author.avatar.url if ctx.author.avatar else None)
+        embed.set_footer(text=f"Made by KaluBhoi • Today at {now}", icon_url=ctx.author.avatar.url if ctx.author.avatar else None)
 
     elif "vouch" in helpcategory:
         embed.title = f"<:prices:1305942191629271120> Vouch Commands"
         embed.description = (
             f"`{bot.command_prefix}vouch @user <amount> <product>` - Creates a format to vouch for a user\n"
         )
-        embed.set_footer(text=f"Made by 75hq • Today at {now}", icon_url=ctx.author.avatar.url if ctx.author.avatar else None)
+        embed.set_footer(text=f"Made by KaluBhoi • Today at {now}", icon_url=ctx.author.avatar.url if ctx.author.avatar else None)
 
     elif "crypto" in helpcategory:
         embed.title = f"<:Crypto_Exchange:1306307580687028345> Crypto Cmds"
@@ -340,7 +347,7 @@ async def help(ctx, helpcategory="none"):
             f"`{bot.command_prefix}price <crypto>` - Get the current price of a specified cryptocurrency\n"
             f"`{bot.command_prefix}convertcrypto <from> <to> <amount>` - Convert between different cryptocurrencies\n"
         )
-        embed.set_footer(text=f"Made by 75hq • Today at {now}", icon_url=ctx.author.avatar.url if ctx.author.avatar else None)
+        embed.set_footer(text=f"Made by KaluBhoi • Today at {now}", icon_url=ctx.author.avatar.url if ctx.author.avatar else None)
 
     elif "text" in helpcategory:
         embed.title = f"<:ticket:1300853179927363599> Text Cmds"
@@ -362,7 +369,7 @@ async def help(ctx, helpcategory="none"):
             f"`{bot.command_prefix}unfliptable [text]` - Unflip table text\n"
             f"`{bot.command_prefix}hastebin [text]` - Upload to hastebin\n"
         )
-        embed.set_footer(text=f"Made by 75hq • Today at {now}", icon_url=ctx.author.avatar.url if ctx.author.avatar else None)
+        embed.set_footer(text=f"Made by KaluBhoi • Today at {now}", icon_url=ctx.author.avatar.url if ctx.author.avatar else None)
 
     elif "guild" in helpcategory:
         embed.title = f"<:copy:1305898732084269106> Guild Cmds"
@@ -371,7 +378,7 @@ async def help(ctx, helpcategory="none"):
             f"`{bot.command_prefix}cchannels <target-guild> <guild-to-change>` - Copy channels\n"
             f"`{bot.command_prefix}croles <target-guild> <guild-to-change>` - Copy Roles\n"
         )
-        embed.set_footer(text=f"Made by 75hq • Today at {now}", icon_url=ctx.author.avatar.url if ctx.author.avatar else None)
+        embed.set_footer(text=f"Made by KaluBhoi • Today at {now}", icon_url=ctx.author.avatar.url if ctx.author.avatar else None)
 
     elif "autorespond" in helpcategory or "autoresponder" in helpcategory:
         embed.title = f"<:Members:1305993106457497612> Auto Responder Cmds"
@@ -380,7 +387,7 @@ async def help(ctx, helpcategory="none"):
             f"`{bot.command_prefix}removear <trigger-word>` - Remove an auto-response\n"
             f"`{bot.command_prefix}showar` - Show all auto-responses\n"
         )
-        embed.set_footer(text=f"Made by 75hq • Today at {now}", icon_url=ctx.author.avatar.url if ctx.author.avatar else None)
+        embed.set_footer(text=f"Made by KaluBhoi • Today at {now}", icon_url=ctx.author.avatar.url if ctx.author.avatar else None)
 
     elif "ltcsender" in helpcategory:
         embed.title = f"<:LTC:1305994660073963530> LTC Sender Cmds"
@@ -391,7 +398,7 @@ async def help(ctx, helpcategory="none"):
             f"`{bot.command_prefix}genwallet` - Generate a new Litecoin wallet\n"
             f"`{bot.command_prefix}wallets` - List all saved wallets\n"
         )
-        embed.set_footer(text=f"Made by 75hq • Today at {now}", icon_url=ctx.author.avatar.url if ctx.author.avatar else None)
+        embed.set_footer(text=f"Made by KaluBhoi • Today at {now}", icon_url=ctx.author.avatar.url if ctx.author.avatar else None)
 
     elif "checker" in helpcategory:
         embed.title = f"<:check:1305951941423009803> Checker Cmds"
@@ -399,7 +406,7 @@ async def help(ctx, helpcategory="none"):
             f"`{bot.command_prefix}tokeninfo <token>` - Get token information\n"
             f"`{bot.command_prefix}checkpromo <promo-link>` - Check a promo link\n"
         )
-        embed.set_footer(text=f"Made by 75hq • Today at {now}", icon_url=ctx.author.avatar.url if ctx.author.avatar else None)
+        embed.set_footer(text=f"Made by KaluBhoi • Today at {now}", icon_url=ctx.author.avatar.url if ctx.author.avatar else None)
 
     elif "selling" in helpcategory:
         embed.title = f"<:prices:1305942191629271120> Selling Cmds"
@@ -409,7 +416,7 @@ async def help(ctx, helpcategory="none"):
             f"`{bot.command_prefix}upiqr <amount>` - Receive payments via UPI\n"
             f"`{bot.command_prefix}ltcqr <amount>` - Receive payments via LTC\n"
         )
-        embed.set_footer(text=f"Made by 75hq • Today at {now}", icon_url=ctx.author.avatar.url if ctx.author.avatar else None)
+        embed.set_footer(text=f"Made by KaluBhoi • Today at {now}", icon_url=ctx.author.avatar.url if ctx.author.avatar else None)
 
     elif "status" in helpcategory:
         embed.title = f"<:Lr_simp_dot:1307938031067598868> Status Cmds"
@@ -422,7 +429,7 @@ async def help(ctx, helpcategory="none"):
             f"`{bot.command_prefix}stream [status]` - Set a stream status\n"
             f"`{bot.command_prefix}twitchurl [twitch-url]` - Set Twitch stream status\n"
         )
-        embed.set_footer(text=f"Made by 75hq • Today at {now}", icon_url=ctx.author.avatar.url if ctx.author.avatar else None)
+        embed.set_footer(text=f"Made by KaluBhoi • Today at {now}", icon_url=ctx.author.avatar.url if ctx.author.avatar else None)
 
     elif "vc" in helpcategory:
         embed.title = f"<:humanity_VC:1307940060989231154> VC Cmds"
@@ -441,7 +448,7 @@ async def help(ctx, helpcategory="none"):
             f"`{bot.command_prefix}vcsetlimit [limit]` - Set a limit for users in VC\n"
             f"`{bot.command_prefix}vcname [new_name]` - Rename the current voice channel\n"
         )
-        embed.set_footer(text=f"Made by 75hq • Today at {now}", icon_url=ctx.author.avatar.url if ctx.author.avatar else None)
+        embed.set_footer(text=f"Made by KaluBhoi • Today at {now}", icon_url=ctx.author.avatar.url if ctx.author.avatar else None)
 
     elif "usercmds" in helpcategory:
         embed.title = f"<:43565member:1306361082922799114> User Cmds"
@@ -452,7 +459,7 @@ async def help(ctx, helpcategory="none"):
             f"`{bot.command_prefix}leaveall` - Leave all servers\n"
             f"`{bot.command_prefix}leaveallgroups` - Leave all groups\n"
         )
-        embed.set_footer(text=f"Made by 75hq • Today at {now}", icon_url=ctx.author.avatar.url if ctx.author.avatar else None)
+        embed.set_footer(text=f"Made by KaluBhoi • Today at {now}", icon_url=ctx.author.avatar.url if ctx.author.avatar else None)
 
     elif "nsfw" in helpcategory:
         embed.title = f":underage: NSFW Cmds"
@@ -480,7 +487,7 @@ async def help(ctx, helpcategory="none"):
             f"`{bot.command_prefix}hass` - Get hass pics\n"
             f"`{bot.command_prefix}hrandom` - Get random NSFW pics\n"
         )
-        embed.set_footer(text=f"Made by 75hq • Today at {now}", icon_url=ctx.author.avatar.url if ctx.author.avatar else None)
+        embed.set_footer(text=f"Made by KaluBhoi • Today at {now}", icon_url=ctx.author.avatar.url if ctx.author.avatar else None)
 
     elif "security" in helpcategory:
         embed.title = f"<:MOD:1308128124172500992> Security Cmds"
@@ -489,7 +496,7 @@ async def help(ctx, helpcategory="none"):
             f"`{bot.command_prefix}kickallbots` - Kick all bots from the server\n"
             f"`{bot.command_prefix}deleteallwebhooks` - Delete all webhooks\n"
         )
-        embed.set_footer(text=f"Made by 75hq • Today at {now}", icon_url=ctx.author.avatar.url if ctx.author.avatar else None)
+        embed.set_footer(text=f"Made by KaluBhoi • Today at {now}", icon_url=ctx.author.avatar.url if ctx.author.avatar else None)
 
     elif "music" in helpcategory:
         embed.title = f"<:music:1309894376440332403> Music Cmds"
@@ -507,14 +514,14 @@ async def help(ctx, helpcategory="none"):
             f"`{bot.command_prefix}loop` - Toggle looping for the current song\n"
             f"`{bot.command_prefix}clearqueue` - Clear the music queue\n"
           )
-        embed.set_footer(text=f"Made by 75hq • Today at {now}", icon_url=ctx.author.avatar.url if ctx.author.avatar else None)
+        embed.set_footer(text=f"Made by KaluBhoi • Today at {now}", icon_url=ctx.author.avatar.url if ctx.author.avatar else None)
         
     elif "autosender" in helpcategory:
         embed.title = f"<a:7492symbollattice:1310977804925407293> Auto Responder Cmds"
         embed.description = (
             f"`{bot.command_prefix}startautosender <channel_id> <cooldown_time> <msg>` - Start an auto-responder\n"
             f"`{bot.command_prefix}stopautosender <channel_id>` - Stop an auto-responder\n")
-        embed.set_footer(text=f"Made by 75hq • Today at {now}", icon_url=ctx.author.avatar.url if ctx.author.avatar else None)
+        embed.set_footer(text=f"Made by KaluBhoi • Today at {now}", icon_url=ctx.author.avatar.url if ctx.author.avatar else None)
 
     else:
         embed.title = "❓ Unknown Help Category"
@@ -1018,7 +1025,7 @@ async def ip(ctx, ip_address: str):
     embed.add_field(name="Organization", value=data.get("org", "N/A"), inline=False)
     embed.add_field(name="Location", value=data.get("loc", "N/A"), inline=True)
     embed.add_field(name="Postal Code", value=data.get("postal", "N/A"), inline=True)
-    embed.set_footer(text="Made by 75hq")
+    embed.set_footer(text="Made by KaluBhoi")
     await send_embed(ctx, embed)
 
 @bot.command()
